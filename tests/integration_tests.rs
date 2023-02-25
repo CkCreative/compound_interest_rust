@@ -3,7 +3,7 @@ fn test_compound_interest() {
     let principal = 100.0;
     let interest_rate = 1.0;
     let days = 70.0;
-    let output_data = trader::compound_interest(principal, interest_rate, days);
+    let output_data = compound::compound_interest(principal, interest_rate, days);
     assert_eq!(output_data.len(), 70);
     assert_eq!(output_data[0].0, 1);
     assert_eq!(output_data[0].1, 101.00);

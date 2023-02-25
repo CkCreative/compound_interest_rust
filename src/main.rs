@@ -1,12 +1,12 @@
 use std::fs::File;
 use std::io::{self, Write};
 
-extern crate trader;
+extern crate compound;
 
 fn main() {
     let (principal, interest_rate, days) = read_input();
 
-    let output_data = trader::compound_interest(principal, interest_rate, days);
+    let output_data = compound::compound_interest(principal, interest_rate, days);
 
     write_output_to_csv(principal, interest_rate, days, &output_data);
 }
